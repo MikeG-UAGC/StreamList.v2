@@ -1,0 +1,261 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  background-color: #0056b3; /* Change the background color to blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  color: #ff9900; /* Change color on hover */
+  border-bottom: 2px solid #ff9900;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+  }
+}
+
+/* Content Padding */
+div {
+  padding: 20px;
+}
+
+/* Container for the subscription buttons */
+.subscription-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+/* General Button Styles */
+.subscription-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px; /* Rounded corners for modern look */
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+  text-transform: uppercase;
+}
+
+/* Bronze Button */
+.subscription-button.bronze {
+  background-color: #cd7f32; /* Bronze color */
+}
+
+.subscription-button.bronze:hover {
+  background-color: #b76929; /* Darker bronze on hover */
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Gold Button */
+.subscription-button.gold {
+  background-color: #ffd700; /* Gold color */
+}
+
+.subscription-button.gold:hover {
+  background-color: #e6c200; /* Darker gold on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Platinum Button */
+.subscription-button.platinum {
+  background-color: #e5e4e2; /* Platinum color */
+  color: black; /* Black text for contrast */
+}
+
+.subscription-button.platinum:hover {
+  background-color: #cccccc; /* Darker platinum on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove from Cart Button (similar style, but red) */
+.remove-from-cart-button {
+  background-color: #dc3545; /* Red background for removal */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.remove-from-cart-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.remove-from-cart-button:active {
+  transform: scale(0.95); /* Shrink slightly when clicked */
+}
+
+/* Movie Grid Layout */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Movie Card Styling */
+.movie-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Hover effect */
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+}
+
+.movie-details {
+  padding: 10px;
+  text-align: center;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.movie-rating {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Load More Button */
+.load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.load-more-button:hover {
+  background-color: #0056b3;
+}
+
+.movie-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.movie-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.movie-item img {
+  border-radius: 10px;
+}
+
+.movie-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.movie-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
