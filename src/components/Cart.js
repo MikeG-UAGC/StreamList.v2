@@ -1,23 +1,25 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../CartContext'; // Import Cart Context
+import { CartContext } from '../CartContext';
 
 function Cart() {
-  const { cartItems, removeFromCart } = useContext(CartContext); // Access cart context
+  const { cartItems, removeFromCart } = useContext(CartContext);
 
   return (
     <div>
       <h1>Cart Page</h1>
-
-      {/* Display the current subscription in the cart */}
-      {cartItems ? (
-        <div>
-          <h3>Subscription in Cart: {cartItems.subscription}</h3>
-          <p>Price: ${cartItems.price.toFixed(2)}</p>
-          {/* Remove button */}
-          <button className="remove-from-cart-button" onClick={removeFromCart}>
-            Remove Subscription
-          </button>
-        </div>
+      {cartItems.length > 0 ? (
+        <ul>
+          {cartItems.map((item, index) => (
+            <li key={index}>
+              <h3>{item.subscription} Plan</h3>
+              {/* Check if price exists before calling toFixed */}
+              <p>Price: ${item.price ? item.price.toFixed(2) : 'N/A'}</p>
+              <button className="remove-from-cart-button" onClick={() => removeFromCart(index)}>
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
       ) : (
         <p>Your cart is empty.</p>
       )}
