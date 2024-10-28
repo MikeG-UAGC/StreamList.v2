@@ -7,7 +7,7 @@ function Movies() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = '97ff0cccd476d9f213ba935157939e49'; // Replace with your actual TMDB API key
+  const API_KEY = '97ff0cccd476d9f213ba935157939e49';
   const TMDB_API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`;
 
   useEffect(() => {

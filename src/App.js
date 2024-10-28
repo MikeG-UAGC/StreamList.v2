@@ -5,11 +5,11 @@ import Movies from './components/Movies';
 import Cart from './components/Cart';
 import About from './components/About';
 import MovieSearch from './components/MovieSearch';
-import { CartContext } from './CartContext'; // Import CartContext to access the cart
+import { CartContext } from './CartContext';
 import './App.css';
 
 function App() {
-  const { cartItems } = useContext(CartContext); // Access cartItems from CartContext
+  const { cartItems } = useContext(CartContext);
 
   return (
     <Router>

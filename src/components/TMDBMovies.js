@@ -6,10 +6,10 @@ function TMDBMovies() {
   const [loading, setLoading] = useState(true); // State to track loading status
   const [error, setError] = useState(null); // State to track any errors
 
-  const API_KEY = '97ff0cccd476d9f213ba935157939e49'; // Replace with your TMDB API key
+  const API_KEY = '97ff0cccd476d9f213ba935157939e49';
   const TMDB_API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
 
-  // Fetch popular movies from TMDB API when the component mounts
+  // Retrieve popular movies from the TMDB API
   useEffect(() => {
     const fetchMovies = async () => {
       try {
