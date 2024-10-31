@@ -14,7 +14,7 @@ function StreamList() {
 
   return (
     <div>
-      <h1>StreamList Page</h1>
+      <h1>StreamList Home</h1>
       <p>Choose your subscription plan:</p>
 
       <div className="subscription-buttons">

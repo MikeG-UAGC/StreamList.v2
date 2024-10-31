@@ -18,6 +18,8 @@ function App() {
         <nav className="navbar">
           <div className="logo">
             <h2>EZTech Movie</h2>
+            {/* Logo Image */}
+            <img src="/logo-75x75.png" alt="EZTech Logo" style={{ width: '75px', height: '75px', marginLeft: '10px' }} />
           </div>
           <ul className="nav-links">
             <li>

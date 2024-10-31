@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #dae5f5;
 }
 
 /* Navigation Bar Styling */
@@ -22,10 +22,20 @@ body {
   z-index: 1000;
 }
 
+.logo {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  flex-direction: row; /* Ensures horizontal alignment */
+}
+
 .logo h2 {
   color: #fff;
   font-size: 24px;
   font-weight: bold;
+}
+
+.logo img {
+  margin-left: 10px; /* Space between the text and logo */
 }
 
 .nav-links {
